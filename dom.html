@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || JAvascript</title>
+</head>
+<body>
+    
+    <div id="parent">
+        <h1>Hello </h1>
+        <p id="result"></p>
+
+        <input type="text" class="nameList" placeholder="Enter your name" id="name">
+        <button onclick="getName()">Submit</button>
+    </div>
+    <div>
+        <h1>Change text box using flag</h1>
+        
+        <div> <label>Box 1</label> <input type="text" id="box1" /></div>
+        <div> <label>Box 2</label> <input type="text" id="box2" /></div>
+        <div> <button onclick="addText('box1')">Add Value</button></div>
+    </div>
+
+    <script>
+        var isFirstClick = true;
+        function getName(){
+        var nameBox = document.getElementById('name');
+        var result = document.getElementById('result');
+        
+        result.innerHTML = nameBox.value;
+        console.log(nameBox);
+        }
+
+        function addText(value){
+
+            var box1 = document.getElementById('box1');
+            var box2 = document.getElementById('box2');
+if(isFirstClick)
+{
+    box1.value +=value;
+    isFirstClick = false;
+}
+else{
+    box2.value +=value;
+    
+}
+           
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- DOM - Document Object Model -->
+ <!-- Selectors 
+ 
+ 1) ID  - #id document.getElementById('id'); //Object
+ 2) Class - .class  document.getElementsByClassName('class'); //Array
+ 3) Tag - tag document.getElementsByTagName('tag'); //Array
+ 4) Attribute - [attribute] document.querySelectorAll('[attribute]'); //Array
+ 5) Name - name document.querySelectorAll('name'); //Array document.getElementsByName('name'); //Array
+
+ formElements -element.value
+  ContainerElements/formatingelements - element.innerHTML
+ 
+ 
+ -->

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Looping Statement</title>
+    <script>
+for (let i = 1; i <= 5; i++) {   // ++ - increment, -- - decrement i=i+1, i=i-1
+    console.log(i); //consoles number 0-4
+}
+
+// While loop
+let i = 9;
+console.log('while loop')
+        while (i > 5) {
+            console.log(i);
+            i--;
+        }
+
+// do while loop
+let j = 9;
+console.log('do while loop')
+        do {
+            console.log(j);
+            j--;
+        } while (j < 5);
+
+
+        // loop array using for loop
+        let arr = [1,2,13,4,5];
+        console.log('loop array using for loop')
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        console.log('Looping array using forEach')
+        // Looping array using forEach
+        arr.forEach(element => {
+            console.log(element);
+        });
+
+    </script>
+
+    <!-- 
+1) i=0;
+2) i>5; 10>5 -> true
+    3) console.log(i); //10
+    4) i=i-1 i--;  -> 9
+    5) i>5 9>5 -> true
+    6) console.log(i); //9
+    7) i=i-1 i--; -> 8
+    8) i>5 8>5 -> true
+    9) console.log(i); //8
+
+    -->
+
+    <!-- While Loop -->
+        <!-- while (condition) {
+            statement(s)
+        }
+        -->
+       
+       
+</head>
+<body>
+    <h1>Looping Statement</h1>
+    <!-- 1) For Loop --> 
+    <!-- 2) While Loop -->
+     <!-- 3) Do While Loop -->
+    <!-- 4) For Each Loop  for array-->
+
+    <h2>What is Looping Statement?</h2>
+    <p>Looping statement is used to repeat a block of code multiple times.</p>
+    <h2>For Loop</h2>
+    <p>For loop is used to repeat a block of code a specific number of times.</p>
+    <h3>For Loop Syntax</h3>
+    <pre>
+for (initialization; condition; increment/decrement) {
+    statement(s) - codeblock
+}
+    </pre>
+    <h3>For Loop Example</h3>
+    <pre>
+for (let i = 0; i < 5; i++) {
+    console.log(i); //consoles number 0-4
+}
+    </pre>
+    <h2>While Loop</h2>
+    <p>While loop is used to repeat a block of code as long as a condition is true.</p>
+    <h3>While Loop Syntax</h3>
+    <pre>
+while (condition) {
+    statement(s)
+}
+    </pre>
+    <h3>While Loop Example</h3>
+    <pre>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+    </pre>
+</body>
+</html>
